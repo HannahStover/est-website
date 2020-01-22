@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Main from './components/MainComponent';
 import logo from './logo.svg';
 import './App.css';
@@ -8,18 +8,18 @@ import { ConfigureStore } from './redux.configureStore';
 
 const store = ConfigureStore();
 
-function App() {
-  return (
-   render() {
-     <Provider store={store}>
-       <BrowserRouter>
-         <div>
-           <Main />
-         </div>
-       </BrowserRouter>
-     </Provider>
-   }
-  );
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <div>
+            <Main />
+          </div>
+        </BrowserRouter>
+      </Provider>
+    );
+  }
 }
 
 export default App;
