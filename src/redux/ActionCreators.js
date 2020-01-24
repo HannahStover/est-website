@@ -1,21 +1,9 @@
 import * as ActionTypes from './ActionTypes';
 import { baseUrl } from '../shared/baseUrl';
 
-// Contact
-export const contactMe = contact => dispatch => {
-  const data = {
-    ...feedback,
-    date: new Date()
-  };
-
-  return fetch(baseUrl + 'feedback', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    credentials: 'same-origin'
-  })
+export const fetchClients = () => dispatch => {
+  dispatch(clientsLoading());
+  return fetch(baseUrl + 'clients')
     .then(
       response => {
         if (response.ok) {
@@ -34,7 +22,20 @@ export const contactMe = contact => dispatch => {
       }
     )
     .then(response => response.json())
-    .catch(error => {
-      console.log('Contact Me', error.message);
-    });
+    .then(clients => dispatch(addClients(clients)))
+    .catch(error => dispatch(clientsFailed(error.message)));
 };
+
+export const clientsLoading = () => ({
+  type: ActionTypes.CLIENTS_LOADING
+});
+
+export const clientsFailed = errmess => ({
+  type: ActionTypes.CLIENTS_FAILED,
+  payload: errmess
+});
+
+export const addClients = clients => ({
+  type: ActionTypes.ADD_CLIENTS,
+  payload: clients
+});
