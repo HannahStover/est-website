@@ -1,26 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Footer(props) {
   return (
     <div className='footer'>
       <div className='container'>
         <div className='row justify-content-center'>
-          <div className='col-4 offset-1 col-sm-2'>
-            <ul>
-              <li>
-                <Link to='/home'>Home</Link>
-              </li>
-              <li>
-                <Link to='/approach'>Approach</Link>
-              </li>
-              <li>
-                <Link to='/forms'>Fees & Forms</Link>
-              </li>
-              <li>
-                <Link to='/contact'>contact</Link>
-              </li>
-            </ul>
+          <div className='col-auto'>
+            <h3>
+              <a href='/home'>Home</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href='/approach'>Approach</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href='/forms'>Forms</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href='/contact'>Contact</a>
+            </h3>
           </div>
         </div>
       </div>

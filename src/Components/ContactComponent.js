@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Label, Row, Col } from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
-import { Control, Form, Errors } from 'react-redux-form';
+
+const required = val => val && val.length;
+const maxLength = len => val => !val || val.length <= len;
+const minLength = len => val => val && val.length >= len;
+const isNumber = val => !isNaN(Number(val));
+const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
   constructor(props) {
@@ -9,12 +14,18 @@ class Contact extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleSubmit(values) {
+    console.log('Current State is: ' + JSON.stringify(values));
+    this.props.postFeedback(values);
+    this.props.resetFeedbackForm();
+  }
+
   render() {
     return (
       <div className='container'>
         <div className='row row-content'>
           <div className='col-12'>
-            <h3>Contact Me</h3>
+            <h3>Contact</h3>
           </div>
           <div className='col-12 col-md-9'>
             <Form
@@ -43,7 +54,7 @@ class Contact extends Component {
                     model='.firstname'
                     show='touched'
                     messages={{
-                      required: 'Required ',
+                      required: 'Required',
                       minLength: 'Must be greater than 2 characters',
                       maxLength: 'Must be 15 characters or less'
                     }}
@@ -72,7 +83,7 @@ class Contact extends Component {
                     model='.lastname'
                     show='touched'
                     messages={{
-                      required: 'Required ',
+                      required: 'Required',
                       minLength: 'Must be greater than 2 characters',
                       maxLength: 'Must be 15 characters or less'
                     }}
@@ -88,7 +99,7 @@ class Contact extends Component {
                     model='.telnum'
                     id='telnum'
                     name='telnum'
-                    placeholder='Telephone Number'
+                    placeholder='Tel. Number'
                     className='form-control'
                     validators={{
                       required,
@@ -102,10 +113,10 @@ class Contact extends Component {
                     model='.telnum'
                     show='touched'
                     messages={{
-                      required: 'Required ',
-                      minLength: 'Must be greater than 2 numbers ',
-                      maxLength: 'Must be 15 numbers or less ',
-                      isNumber: 'Must be a number '
+                      required: 'Required',
+                      minLength: 'Must be greater than 2 numbers',
+                      maxLength: 'Must be 15 numbers or less',
+                      isNumber: 'Must be a number'
                     }}
                   />
                 </Col>
@@ -131,8 +142,8 @@ class Contact extends Component {
                     model='.email'
                     show='touched'
                     messages={{
-                      required: 'Required ',
-                      validEmail: 'Invalid Email Address '
+                      required: 'Required',
+                      validEmail: 'Invalid Email Address'
                     }}
                   />
                 </Col>

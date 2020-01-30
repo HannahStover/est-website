@@ -1,17 +1,35 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Media } from 'reactstrap';
-import { Loading } from './LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
-import { Fade, Stagger } from 'react-animation-components';
 
-function About(props) {
+function Approach(props) {
   return (
-    <div className='container'>
-      <div className='row'>
-        <div className='col-12'>
-          <h3>About</h3>
+    <>
+      <div>
+        <div className='container'>
+          <div className='row row-header'>
+            <div className='col-12 col-sm-6'>
+              <h1>My Approach</h1>
+            </div>
+          </div>
+        </div>
+        <div className='row row-content approach'>
+          <div className='col-12 col-md-6'>
+            <p>
+              As a therapist, I value and create a safe, nurturing, and empathic
+              environment for individuals, couples, and families to explore
+              underlying issues to relationship problems, depression, anxiety,
+              grief and loss, and abuse of substances. I am trained in EMDR,
+              which helps a person to quickly move through recent and past
+              trauma and successfully overcome symptoms related to PTSD (post
+              traumatic stress disorder). We'll work together to help you find a
+              healthy balance between body, mind, and emotions that allow for
+              success in relationships and work, self-empowerment, and to live a
+              life full of hope, meaning, and purpose.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
+
+export default Approach;

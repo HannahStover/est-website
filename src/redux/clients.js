@@ -9,14 +9,6 @@ export const Clients = (
   action
 ) => {
   switch (action.type) {
-    case ActionTypes.ADD_CLIENTS:
-      return {
-        ...state,
-        isLoading: false,
-        errMess: null,
-        clients: action.payload
-      };
-
     case ActionTypes.CLIENTS_LOADING:
       return { ...state, isLoading: true, errMess: null, clients: [] };
 
@@ -27,6 +19,15 @@ export const Clients = (
         errMess: action.payload,
         clients: []
       };
+
+    case ActionTypes.ADD_CLIENTS:
+      return {
+        ...state,
+        isLoading: false,
+        errMess: null,
+        clients: action.payload
+      };
+
     default:
       return state;
   }
