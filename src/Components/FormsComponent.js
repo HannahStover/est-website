@@ -1,13 +1,16 @@
 import React from 'react';
+import { Fade } from 'react-animation-components';
 
 function Forms(props) {
   return (
-    <>
-      <div>
+    <div>
+      <Fade in>
         <div className='container'>
           <div className='row row-header'>
             <div className='col-12 col-sm-6'>
               <h1>I'm Here to Help.</h1>
+              <br></br>
+              <br></br>
             </div>
           </div>
         </div>
@@ -19,9 +22,12 @@ function Forms(props) {
               free to address them when you meet with me. Thank you!
             </p>
           </div>
+          <div className='col-12 col-md-6'>
+            <a href='/documents/ClientIntake.pdf'>Client Intake</a>
+          </div>
         </div>
-      </div>
-    </>
+      </Fade>
+    </div>
   );
 }
 

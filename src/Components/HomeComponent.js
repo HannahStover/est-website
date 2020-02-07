@@ -1,23 +1,25 @@
 import React from 'react';
-import { Jumbotron } from 'reactstrap';
+import HomeIcons from './HomeIconsComponent';
+import { Fade } from 'react-animation-components';
 
 const Home = () => {
   return (
-    <div>
-      <Jumbotron className='masthead'>
-        <div className='container'>
-          <div className='row row-header'>
-            <div className='col-12 col-sm-6'>
-              <h1>Elaine Stover Therapy</h1>
-              <p>Marriage & Family Counselor</p>
-            </div>
+    <Fade in>
+      <div className='container'>
+        <div className='row row-header'>
+          <div className='col-12 col-sm-6 mt-3'>
+            <h1>Insights</h1>
+            <br></br>
+            <br></br>
+            <p>A place for counseling, coaching, and spiritual development.</p>
+            <br></br>
+            <br></br>
+            <HomeIcons />
           </div>
         </div>
-      </Jumbotron>
-    </div>
+      </div>
+    </Fade>
   );
 };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 export default Home;
