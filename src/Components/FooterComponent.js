@@ -2,10 +2,10 @@ import React from 'react';
 
 function Footer(props) {
   return (
-    <div className='footer d-none d-lg-block'>
+    <div className='footer d-none d-md-block'>
       <div className='row justify-content-center'>
-        <div className='col-auto'>
-          <p>
+        <div className='col-auto mt-3'>
+          <ul>
             <a href='/home' className='text-dark'>
               Home
             </a>
@@ -21,12 +21,7 @@ function Footer(props) {
             <a href='/contact' className='text-dark'>
               Contact
             </a>
-          </p>
-        </div>
-      </div>
-      <div className='row justify-content-center'>
-        <div className='col-auto'>
-          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a
               href='http://www.hannahrosestover.co'
               target='blank'
@@ -34,7 +29,7 @@ function Footer(props) {
             >
               © Copyright 2020 Hannah Stover
             </a>
-          </p>
+          </ul>
         </div>
       </div>
     </div>

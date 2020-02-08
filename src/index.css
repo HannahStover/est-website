@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Lora&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
 body {
   margin: 0;
   height: 100vh;
   min-height: 500px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Crimson Text', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
   background-image: linear-gradient(
-      rgba(126, 80, 94, 0.2),
-      rgba(255, 255, 255, 0.6),
-      rgba(40, 40, 139, 0.2)
+      rgba(216, 184, 193, 0.4),
+      rgba(255, 255, 255, 0.7),
+      rgba(203, 203, 216, 0.8)
     ),
     url('images/vaaaaaaase.png');
   text-align: center;
@@ -22,5 +23,5 @@ body {
 }
 
 code {
-  font-family: 'Raleway', sans-serif, monospace;
+  font-family: 'Crimson Text', serif, monospace;
 }

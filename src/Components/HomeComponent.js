@@ -7,7 +7,7 @@ const Home = () => {
     <Fade in>
       <div className='container'>
         <div className='row row-header'>
-          <div className='col-12 col-sm-6 mt-3'>
+          <div className='mt-3'>
             <h1>Insights</h1>
             <br></br>
             <br></br>

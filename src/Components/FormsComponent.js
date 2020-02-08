@@ -8,7 +8,7 @@ function Forms(props) {
         <div className='container'>
           <div className='row row-header'>
             <div className='col-12 col-sm-6'>
-              <h1>I'm Here to Help.</h1>
+              <h2>Getting Started</h2>
               <br></br>
               <br></br>
             </div>

@@ -1,24 +1,42 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Card, CardBody, Button, CardText, CardHeader } from 'reactstrap';
 
 function HomeIcons(props) {
   return (
     <div>
-      <div className='row'>
+      <div className='row mb-4 pb-5'>
         <div className='col'>
-          <a href='/approach' className='button' role='button'>
+          <Button
+            outline
+            color='info'
+            href='/approach'
+            className='button'
+            size='lg'
+          >
             Approach
-          </a>
+          </Button>{' '}
         </div>
         <div className='col'>
-          <a href='/contact' className='button' role='button'>
-            Appointments
-          </a>
+          <Button
+            outline
+            color='info'
+            href='/approach'
+            className='button'
+            size='lg'
+          >
+            Services
+          </Button>{' '}
         </div>
         <div className='col'>
-          <a href='/services' className='button' role='button'>
-            Counseling
-          </a>
+          <Button
+            outline
+            color='info'
+            href='/approach'
+            className='button'
+            size='lg'
+          >
+            Contact
+          </Button>{' '}
         </div>
       </div>
     </div>
@@ -26,12 +44,3 @@ function HomeIcons(props) {
 }
 
 export default HomeIcons;
-
-{
-  /* <div className='col'>
-          <img src={idea} />
-          <Button outline color='secondary'>
-            Here are some resources that can help you on your journey.
-          </Button>
-        </div> */
-}
